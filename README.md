@@ -1,3 +1,3 @@
-[![Travis](https://img.shields.io/travis/rust-lang/rust.svg?style=for-the-badge)]()
-# express-docker
-A base for building expressjs apis in docker
+[![Travis](https://img.shields.io/travis/escape-today/core-api.svg?style=for-the-badge)]()
+# Core API
+Escape Today Core API
