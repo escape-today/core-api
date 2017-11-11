@@ -1,0 +1,37 @@
+{
+    "name": "express-docker",
+    "version": "1.0.0",
+    "description": "A base for building expressjs apis in docker.",
+    "main": "server.js",
+    "scripts": {
+        "test": "npm run build && node dist/server.js test",
+        "build": "rimraf dist/ && babel src/ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+        "start": "npm run build && node dist/server.js",
+        "docker": "docker-compose up --build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aaronosher/express-docker.git"
+    },
+    "author": "Aaron Osher",
+    "license": "MPL-2.0",
+    "bugs": {
+        "url": "https://github.com/aaronosher/express-docker/issues"
+    },
+    "homepage": "https://github.com/aaronosher/express-docker#readme",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "eslint": "^4.9.0",
+        "nodemon": "^1.12.1",
+        "rimraf": "^2.6.2"
+    },
+    "dependencies": {
+        "body-parser": "^1.18.2",
+        "express": "^4.16.2",
+        "morgan": "^1.9.0",
+        "multer": "^1.3.0",
+        "node-env-file": "^0.1.8",
+        "promise-mysql": "^3.1.1"
+    }
+}

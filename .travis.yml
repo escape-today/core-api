@@ -1,0 +1,11 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - cp example.env .env
+  - docker build -t express-image-to-integrate .
+
+script:
+  - docker run -e CMD=test express-image-to-integrate:latest
