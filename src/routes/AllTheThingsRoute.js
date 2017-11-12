@@ -24,7 +24,7 @@ function AllTheThingsRoute(app) {
             }).catch( (err) => {
                 res.status(500).json({
                     err: true,
-                    msg: err.message
+                    msg: err
                 })
             })
         }
